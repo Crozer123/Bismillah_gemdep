@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bcrovuqact2j5" path="res://scenes/pohon.tscn" id="4_uxg3y"]
 [ext_resource type="PackedScene" uid="uid://bg0qppjsms6co" path="res://scenes/tanaman_wortel.tscn" id="6_cyf2o"]
 [ext_resource type="PackedScene" uid="uid://cvo4gxcihsygd" path="res://scenes/rumahtipe_a.tscn" id="7_cyf2o"]
+[ext_resource type="Shader" uid="uid://b1ih47dtng4bc" path="res://scenes/main_map.gdshader" id="8_64gt2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km2bi"]
 texture = ExtResource("1_whrjg")
@@ -6104,10 +6105,24 @@ custom_data_layer_0/name = "is_dirty"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_km2bi")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2xk3c"]
+shader = ExtResource("8_64gt2")
+shader_parameter/warna_air = Color(0.2, 0.7, 0.9, 0.8)
+shader_parameter/kecepatan_aliran = Vector2(0, 0.5)
+shader_parameter/skala_tekstur = Vector2(2, 4)
+shader_parameter/kekuatan_gelombang = 0.02
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_64gt2"]
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cyf2o"]
+noise = SubResource("FastNoiseLite_64gt2")
+seamless = true
+
 [node name="MainMap" type="Node2D" unique_id=241251806]
 
 [node name="GroundLayer" type="TileMapLayer" parent="." unique_id=1723478554]
-tile_map_data = PackedByteArray("AAD8//z/AAADAAIAAAD9//z/AAADAAIAAAD+//z/AAADAAIAAAD///z/AAADAAIAAAAAAPz/AAADAAIAAAABAPz/AAADAAIAAAACAPz/AAADAAIAAAADAPz/AAADAAIAAAADAP3/AAADAAIAAAADAP7/AAADAAIAAAADAP//AAADAAIAAAADAAAAAAADAAIAAAADAAEAAAADAAIAAAADAAIAAAADAAIAAAADAAMAAAADAAIAAAACAAMAAAADAAIAAAABAAMAAAADAAIAAAAAAAMAAAADAAIAAAD//wMAAAADAAIAAAD+/wMAAAADAAIAAAD9/wMAAAADAAIAAAD8/wMAAAADAAIAAAD8/wIAAAADAAIAAAD8/wEAAAADAAIAAAD8/wAAAAADAAIAAAD8////AAADAAIAAAD8//7/AAADAAIAAAD8//3/AAADAAIAAAD9//3/AAADAAIAAAD9//7/AAADAAIAAAD9////AAADAAIAAAD9/wAAAAADAAIAAAD9/wEAAAADAAIAAAD9/wIAAAADAAIAAAD+/wIAAAADAAIAAAD//wIAAAADAAIAAAAAAAIAAAADAAIAAAABAAIAAAADAAIAAAACAAIAAAADAAIAAAACAAEAAAADAAIAAAACAAAAAAADAAIAAAACAP//AAADAAIAAAACAP7/AAADAAIAAAACAP3/AAADAAIAAAABAP3/AAADAAIAAAAAAP3/AAADAAIAAAD///3/AAADAAIAAAD+//3/AAADAAIAAAD+//7/AAADAAIAAAD+////AAADAAIAAAD+/wAAAAADAAIAAAD+/wEAAAADAAIAAAD//wEAAAADAAIAAAAAAAEAAAADAAIAAAABAAEAAAADAAIAAAD//wAAAAADAAIAAAAAAAAAAAADAAIAAAABAAAAAAADAAIAAAABAP7/AAADAAIAAAAAAP7/AAADAAIAAAD///7/AAADAAIAAAD/////AAADAAIAAAAAAP//AAADAAIAAAAEAPz/AAACAAMAAAAEAP3/AAACAAMAAAAEAP7/AAACAAMAAAAEAP//AAACAAMAAAAEAAAAAAACAAMAAAAEAAEAAAACAAMAAAAEAAIAAAACAAMAAAAEAAMAAAACAAMAAAAEAAQAAAACAAMAAAADAAQAAAACAAMAAAACAAQAAAACAAMAAAABAAQAAAACAAMAAAAAAAQAAAACAAMAAAD//wQAAAACAAMAAAD+/wQAAAACAAMAAAD9/wQAAAACAAMAAAD8/wQAAAACAAMAAAD7/wQAAAACAAMAAAD7/wMAAAACAAMAAAD7/wIAAAACAAMAAAD7/wEAAAACAAMAAAD7/wAAAAACAAMAAAD7////AAACAAMAAAD7//7/AAACAAMAAAD7//3/AAACAAMAAAD7//z/AAACAAMAAAD7//v/AAACAAMAAAD8//v/AAACAAMAAAD9//v/AAACAAMAAAD+//v/AAACAAMAAAD///v/AAACAAMAAAAAAPv/AAACAAMAAAABAPv/AAACAAMAAAACAPv/AAACAAMAAAADAPv/AAACAAMAAAAEAPv/AAACAAMAAAABAP//AAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAD8//z/AAADAAIAAAD9//z/AAADAAIAAAD+//z/AAADAAIAAAD///z/AAADAAIAAAAAAPz/AAADAAIAAAABAPz/AAADAAIAAAACAPz/AAADAAIAAAADAPz/AAADAAIAAAADAP3/AAADAAIAAAADAP7/AAADAAIAAAADAP//AAADAAIAAAADAAAAAAADAAIAAAADAAEAAAADAAIAAAADAAIAAAADAAIAAAADAAMAAAADAAIAAAACAAMAAAADAAIAAAABAAMAAAADAAIAAAAAAAMAAAADAAIAAAD//wMAAAADAAIAAAD+/wMAAAADAAIAAAD9/wMAAAADAAIAAAD8/wMAAAADAAIAAAD8/wIAAAADAAIAAAD8/wEAAAADAAIAAAD8/wAAAAADAAIAAAD8////AAADAAIAAAD8//7/AAADAAIAAAD8//3/AAADAAIAAAD9//3/AAADAAIAAAD9//7/AAADAAIAAAD9////AAADAAIAAAD9/wAAAAADAAIAAAD9/wEAAAADAAIAAAD9/wIAAAADAAIAAAD+/wIAAAADAAIAAAD//wIAAAADAAIAAAAAAAIAAAADAAIAAAABAAIAAAADAAIAAAACAAIAAAADAAIAAAACAAEAAAADAAIAAAACAAAAAAADAAIAAAACAP//AAADAAIAAAACAP7/AAADAAIAAAACAP3/AAADAAIAAAABAP3/AAADAAIAAAAAAP3/AAADAAIAAAD///3/AAADAAIAAAD+//3/AAADAAIAAAD+//7/AAADAAIAAAD+////AAADAAIAAAD+/wAAAAADAAIAAAD+/wEAAAADAAIAAAD//wEAAAADAAIAAAAAAAEAAAADAAIAAAABAAEAAAADAAIAAAD//wAAAAADAAIAAAAAAAAAAAADAAIAAAABAAAAAAADAAIAAAABAP7/AAADAAIAAAAAAP7/AAADAAIAAAD///7/AAADAAIAAAD/////AAADAAIAAAAAAP//AAADAAIAAAAEAPz/AAACAAMAAAAEAP3/AAACAAMAAAAEAP7/AAACAAMAAAAEAP//AAACAAMAAAAEAAAAAAACAAMAAAAEAAEAAAACAAMAAAAEAAIAAAACAAMAAAAEAAMAAAACAAMAAAAEAAQAAAACAAMAAAADAAQAAAACAAMAAAACAAQAAAACAAMAAAABAAQAAAACAAMAAAAAAAQAAAACAAMAAAD//wQAAAACAAMAAAD+/wQAAAACAAMAAAD9/wQAAAACAAMAAAD8/wQAAAACAAMAAAD7/wQAAAACAAMAAAD7/wMAAAACAAMAAAD7/wIAAAACAAMAAAD7/wEAAAACAAMAAAD7/wAAAAACAAMAAAD7////AAACAAMAAAD7//7/AAACAAMAAAD7//3/AAACAAMAAAD7//z/AAACAAMAAAD7//v/AAACAAMAAAD8//v/AAACAAMAAAD9//v/AAACAAMAAAD+//v/AAACAAMAAAD///v/AAACAAMAAAAAAPv/AAACAAMAAAABAPv/AAACAAMAAAACAPv/AAACAAMAAAADAPv/AAACAAMAAAAEAPv/AAACAAMAAAABAP//AAADAAIAAAD6//v/AAAAAAIAAAD6//z/AAAAAAIAAAD6//3/AAAAAAIAAAD6//7/AAAAAAIAAAD6////AAAAAAIAAAD6/wAAAAAAAAIAAAD6/wEAAAAAAAIAAAD6/wIAAAAAAAIAAAD6/wMAAAAAAAIAAAD6/wQAAAAAAAIAAAD5//v/AAAAAAIAAAD5//z/AAAAAAIAAAD5//3/AAAAAAIAAAD5//7/AAAAAAIAAAD5////AAAAAAIAAAD5/wAAAAAAAAIAAAD5/wEAAAAAAAIAAAD5/wIAAAAAAAIAAAD5/wMAAAAAAAIAAAD5/wQAAAAAAAIAAAD4/wQAAAAAAAIAAAD4/wMAAAAAAAIAAAD4/wIAAAAAAAIAAAD4/wEAAAAAAAIAAAD4/wAAAAAAAAIAAAD4////AAAAAAIAAAD4//7/AAAAAAIAAAD4//3/AAAAAAIAAAD4//z/AAAAAAIAAAD4//v/AAAAAAIAAAD3//v/AAAAAAIAAAD3//z/AAAAAAIAAAD3//3/AAAAAAIAAAD3//7/AAAAAAIAAAD3////AAAAAAIAAAD3/wAAAAAAAAIAAAD3/wEAAAAAAAIAAAD3/wIAAAAAAAIAAAD3/wMAAAAAAAIAAAD3/wQAAAAAAAIAAAD2/wQAAAAAAAIAAAD2/wMAAAAAAAIAAAD2/wIAAAAAAAIAAAD2/wEAAAAAAAIAAAD2/wAAAAAAAAIAAAD2////AAAAAAIAAAD2//7/AAAAAAIAAAD2//3/AAAAAAIAAAD2//z/AAAAAAIAAAD2//v/AAAAAAIAAAD1//v/AAAAAAIAAAD1//z/AAAAAAIAAAD1//3/AAAAAAIAAAD1//7/AAAAAAIAAAD1////AAAAAAIAAAD1/wAAAAAAAAIAAAD1/wEAAAAAAAIAAAD1/wIAAAAAAAIAAAD1/wMAAAAAAAIAAAD1/wQAAAAAAAIAAAD0/wQAAAAAAAIAAAD0/wMAAAAAAAIAAAD0/wIAAAAAAAIAAAD0/wEAAAAAAAIAAAD0/wAAAAAAAAIAAAD0////AAAAAAIAAAD0//7/AAAAAAIAAAD0//3/AAAAAAIAAAD0//z/AAAAAAIAAAD0//v/AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_p5viw")
 
 [node name="YSortEnvironment" type="Node2D" parent="." unique_id=466133805]
@@ -6122,7 +6137,7 @@ position = Vector2(1, 0)
 y_sort_enabled = true
 
 [node name="pabrik" parent="YSortEnvironment/Buildings" unique_id=550068448 instance=ExtResource("3_eqscl")]
-position = Vector2(156, 53)
+position = Vector2(-32, 98)
 
 [node name="PosKampling" type="StaticBody2D" parent="YSortEnvironment/Buildings" unique_id=1755715966]
 
@@ -6284,51 +6299,66 @@ position = Vector2(632, 523)
 [node name="Ladang" type="Node2D" parent="YSortEnvironment" unique_id=755072455]
 
 [node name="TanamanWortel" parent="YSortEnvironment/Ladang" unique_id=2124368451 instance=ExtResource("6_cyf2o")]
-position = Vector2(-699, 382)
+position = Vector2(-1604, 340)
 
 [node name="TanamanWortel2" parent="YSortEnvironment/Ladang" unique_id=1811306819 instance=ExtResource("6_cyf2o")]
-position = Vector2(-642, 383)
+position = Vector2(-1717, 283)
 
 [node name="TanamanWortel3" parent="YSortEnvironment/Ladang" unique_id=1064643207 instance=ExtResource("6_cyf2o")]
-position = Vector2(-586, 325)
+position = Vector2(-1717, 339)
 
 [node name="TanamanWortel4" parent="YSortEnvironment/Ladang" unique_id=1059666668 instance=ExtResource("6_cyf2o")]
-position = Vector2(-586, 383)
+position = Vector2(-1661, 339)
 
 [node name="TanamanWortel5" parent="YSortEnvironment/Ladang" unique_id=691794971 instance=ExtResource("6_cyf2o")]
-position = Vector2(-700, 325)
+position = Vector2(-1661, 283)
 
 [node name="TanamanWortel6" parent="YSortEnvironment/Ladang" unique_id=1346375376 instance=ExtResource("6_cyf2o")]
-position = Vector2(-643, 325)
+position = Vector2(-1604, 283)
 
 [node name="TanamanWortel9" parent="YSortEnvironment/Ladang" unique_id=107981378 instance=ExtResource("6_cyf2o")]
-position = Vector2(-586, 439)
+position = Vector2(-1717, 396)
 
 [node name="TanamanWortel8" parent="YSortEnvironment/Ladang" unique_id=85347698 instance=ExtResource("6_cyf2o")]
-position = Vector2(-642, 439)
+position = Vector2(-1661, 397)
 
 [node name="TanamanWortel7" parent="YSortEnvironment/Ladang" unique_id=631548475 instance=ExtResource("6_cyf2o")]
-position = Vector2(-699, 439)
+position = Vector2(-1605, 398)
 
 [node name="Rumah" type="Node2D" parent="YSortEnvironment" unique_id=984330832]
 
 [node name="RumahtipeA" parent="YSortEnvironment/Rumah" unique_id=32798013 instance=ExtResource("7_cyf2o")]
-position = Vector2(-425, -554)
+position = Vector2(-1064, -439)
 
 [node name="RumahtipeA5" parent="YSortEnvironment/Rumah" unique_id=139567785 instance=ExtResource("7_cyf2o")]
-position = Vector2(-542, -556)
+position = Vector2(-1303, -441)
 
 [node name="RumahtipeA4" parent="YSortEnvironment/Rumah" unique_id=2049094828 instance=ExtResource("7_cyf2o")]
-position = Vector2(-97, -557)
+position = Vector2(-1069, -712)
 
 [node name="RumahtipeA3" parent="YSortEnvironment/Rumah" unique_id=307638773 instance=ExtResource("7_cyf2o")]
-position = Vector2(-205, -558)
+position = Vector2(-1320, -712)
 
 [node name="RumahtipeA2" parent="YSortEnvironment/Rumah" unique_id=554092621 instance=ExtResource("7_cyf2o")]
-position = Vector2(-316, -557)
+position = Vector2(-1521, -444)
 
 [node name="EventMarkers" type="Node2D" parent="." unique_id=2082399033]
 
 [node name="Marker_Konser" type="Marker2D" parent="EventMarkers" unique_id=246180901]
 
 [node name="Marker_PasarRakyat" type="Marker2D" parent="EventMarkers" unique_id=1124511525]
+
+[node name="Sungai" type="StaticBody2D" parent="." unique_id=1924063994]
+position = Vector2(-19, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="Sungai" unique_id=108669298]
+texture_repeat = 1
+material = SubResource("ShaderMaterial_2xk3c")
+position = Vector2(-184, 0)
+color = Color(0.39215687, 0.9843137, 0.9607843, 0.9019608)
+texture = SubResource("NoiseTexture2D_cyf2o")
+polygon = PackedVector2Array(0, -780, 0, -756, 5, -742, 5, -730, 1, -722, 1, -722, 2, -702, 7, -687, 4, -678, 1, -666, 2, -647, 2, -611, 9, -602, 9, -580, 7, -566, 10, -555, 11, -539, 2, -529, 3, -506, 8, -502, 14, -504, 14, -494, 9, -490, 2, -483, 2, -467, 3, -453, 3, -453, 14, -441, 9, -420, 1, -402, 14, -386, 18, -359, 19, -335, 17, -310, 23, -286, 19, -265, 7, -248, 1, -228, 2, -156, 24, -148, 24, -110, 16, -93, 22, -70, 15, -53, 25, -28, 26, 2, 20, 34, 4, 49, 4, 150, 18, 164, 18, 177, 4, 189, 17, 208, 18, 236, 11, 252, 13, 278, 25, 304, 8, 331, 9, 368, 1, 387, 1, 433, 18, 440, 18, 440, 29, 469, 31, 502, 21, 533, 20, 557, 20, 557, 23, 581, 19, 607, 2, 646, 4, 715, 27, 730, 35, 745, 36, 759, 1, 781, 158, 778, 143, 755, 146, 734, 157, 718, 159, 649, 148, 621, 157, 594, 154, 553, 143, 525, 159, 497, 159, 437, 157, 387, 141, 366, 151, 351, 150, 315, 158, 291, 150, 254, 158, 225, 145, 198, 142, 168, 144, 146, 150, 134, 157, 117, 156, 47, 147, 34, 149, 20, 146, 1, 143, -12, 146, -28, 151, -39, 145, -55, 156, -71, 156, -71, 158, -140, 149, -154, 155, -186, 158, -219, 151, -241, 157, -269, 156, -312, 165, -365, 151, -389, 149, -418, 148, -443, 145, -473, 153, -487, 138, -523, 156, -534, 156, -563, 156, -603, 139, -613, 149, -634, 138, -649, 155, -671, 157, -708, 139, -718, 151, -731, 140, -751, 155, -759, 154, -779)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sungai" unique_id=230906730]
+position = Vector2(-184, 0)
+polygon = PackedVector2Array(0, -780, 0, -756, 5, -742, 5, -730, 1, -722, 1, -722, 2, -702, 7, -687, 4, -678, 1, -666, 2, -647, 2, -611, 9, -602, 9, -580, 7, -566, 10, -555, 11, -539, 2, -529, 3, -506, 8, -502, 14, -504, 14, -494, 9, -490, 2, -483, 2, -467, 3, -453, 3, -453, 14, -441, 9, -420, 1, -402, 14, -386, 18, -359, 19, -335, 17, -310, 23, -286, 19, -265, 7, -248, 1, -228, 2, -156, 24, -148, 24, -110, 16, -93, 22, -70, 15, -53, 25, -28, 26, 2, 20, 34, 4, 49, 4, 150, 18, 164, 18, 177, 4, 189, 17, 208, 18, 236, 11, 252, 13, 278, 25, 304, 8, 331, 9, 368, 1, 387, 1, 433, 18, 440, 18, 440, 29, 469, 31, 502, 21, 533, 20, 557, 20, 557, 23, 581, 19, 607, 2, 646, 4, 715, 27, 730, 35, 745, 36, 759, 1, 781, 158, 778, 143, 755, 146, 734, 157, 718, 159, 649, 148, 621, 157, 594, 154, 553, 143, 525, 159, 497, 159, 437, 157, 387, 141, 366, 151, 351, 150, 315, 158, 291, 150, 254, 158, 225, 145, 198, 142, 168, 144, 146, 150, 134, 157, 117, 156, 47, 147, 34, 149, 20, 146, 1, 143, -12, 146, -28, 151, -39, 145, -55, 156, -71, 156, -71, 158, -140, 149, -154, 155, -186, 158, -219, 151, -241, 157, -269, 156, -312, 165, -365, 151, -389, 149, -418, 148, -443, 145, -473, 153, -487, 138, -523, 156, -534, 156, -563, 156, -603, 139, -613, 149, -634, 138, -649, 155, -671, 157, -708, 139, -718, 151, -731, 140, -751, 155, -759, 154, -779)

@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bmoc7svvojwmy" path="res://assets/Omah rung dadi.png" id="1_m3700"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
-size = Vector2(83.375, 110.5)
+size = Vector2(148.34375, 200.125)
 
 [node name="RumahtipeA" type="StaticBody2D" unique_id=32798013]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=956185993]
-position = Vector2(7.8750014, -7.124999)
-scale = Vector2(0.026916504, 0.026916504)
+position = Vector2(51.375008, 36.375008)
+scale = Vector2(0.048156742, 0.048156742)
 texture = ExtResource("1_m3700")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2976280]
-position = Vector2(11.3125, -8.25)
+position = Vector2(55.828125, 36.9375)
 shape = SubResource("RectangleShape2D_uj04i")
