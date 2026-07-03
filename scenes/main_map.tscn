@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://sh6rhnkqpmcu" path="res://assets/landscape.png" id="1_whrjg"]
 [ext_resource type="PackedScene" uid="uid://qrm47mtcdsr2" path="res://scenes/player.tscn" id="2_1xo34"]
 [ext_resource type="PackedScene" uid="uid://p7xn6wrah683" path="res://scenes/pabrik.tscn" id="3_eqscl"]
+[ext_resource type="PackedScene" uid="uid://ca8tnjqn252e0" path="res://scenes/pohon_cemara.tscn" id="4_4synu"]
 [ext_resource type="PackedScene" uid="uid://bcrovuqact2j5" path="res://scenes/pohon.tscn" id="4_uxg3y"]
+[ext_resource type="PackedScene" uid="uid://bg0qppjsms6co" path="res://scenes/tanaman_wortel.tscn" id="6_cyf2o"]
+[ext_resource type="PackedScene" uid="uid://cvo4gxcihsygd" path="res://scenes/rumahtipe_a.tscn" id="7_cyf2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km2bi"]
 texture = ExtResource("1_whrjg")
@@ -6134,7 +6137,67 @@ y_sort_enabled = true
 
 [node name="Nature" type="Node2D" parent="YSortEnvironment" unique_id=255412113]
 
-[node name="Pohon" parent="YSortEnvironment/Nature" unique_id=589675631 instance=ExtResource("4_uxg3y")]
+[node name="Cemara" parent="YSortEnvironment/Nature" unique_id=589675631 instance=ExtResource("4_4synu")]
+position = Vector2(684, 44)
+
+[node name="Cemara20" parent="YSortEnvironment/Nature" unique_id=409139864 instance=ExtResource("4_4synu")]
+position = Vector2(-753, 642)
+
+[node name="Cemara19" parent="YSortEnvironment/Nature" unique_id=296270689 instance=ExtResource("4_4synu")]
+position = Vector2(530, -601)
+
+[node name="Cemara18" parent="YSortEnvironment/Nature" unique_id=1874757775 instance=ExtResource("4_4synu")]
+position = Vector2(-681, 645)
+
+[node name="Cemara17" parent="YSortEnvironment/Nature" unique_id=1321791004 instance=ExtResource("4_4synu")]
+position = Vector2(-762, 574)
+
+[node name="Cemara16" parent="YSortEnvironment/Nature" unique_id=1396933829 instance=ExtResource("4_4synu")]
+position = Vector2(602, -663)
+
+[node name="Cemara15" parent="YSortEnvironment/Nature" unique_id=952608084 instance=ExtResource("4_4synu")]
+position = Vector2(293, -717)
+
+[node name="Cemara14" parent="YSortEnvironment/Nature" unique_id=1024453827 instance=ExtResource("4_4synu")]
+position = Vector2(386, -668)
+
+[node name="Cemara13" parent="YSortEnvironment/Nature" unique_id=1689069677 instance=ExtResource("4_4synu")]
+position = Vector2(670, -707)
+
+[node name="Cemara12" parent="YSortEnvironment/Nature" unique_id=865898982 instance=ExtResource("4_4synu")]
+position = Vector2(629, -531)
+
+[node name="Cemara11" parent="YSortEnvironment/Nature" unique_id=1137023689 instance=ExtResource("4_4synu")]
+position = Vector2(683, -569)
+
+[node name="Cemara10" parent="YSortEnvironment/Nature" unique_id=278504605 instance=ExtResource("4_4synu")]
+position = Vector2(532, 732)
+
+[node name="Cemara9" parent="YSortEnvironment/Nature" unique_id=821554104 instance=ExtResource("4_4synu")]
+position = Vector2(684, 665)
+
+[node name="Cemara8" parent="YSortEnvironment/Nature" unique_id=892918715 instance=ExtResource("4_4synu")]
+position = Vector2(587, 679)
+
+[node name="Cemara7" parent="YSortEnvironment/Nature" unique_id=436059382 instance=ExtResource("4_4synu")]
+position = Vector2(653, 594)
+
+[node name="Cemara6" parent="YSortEnvironment/Nature" unique_id=27168654 instance=ExtResource("4_4synu")]
+position = Vector2(717, 293)
+
+[node name="Cemara5" parent="YSortEnvironment/Nature" unique_id=1899644502 instance=ExtResource("4_4synu")]
+position = Vector2(638, -299)
+
+[node name="Cemara4" parent="YSortEnvironment/Nature" unique_id=28433914 instance=ExtResource("4_4synu")]
+position = Vector2(700, -247)
+
+[node name="Cemara3" parent="YSortEnvironment/Nature" unique_id=78399549 instance=ExtResource("4_4synu")]
+position = Vector2(654, -150)
+
+[node name="Cemara2" parent="YSortEnvironment/Nature" unique_id=1601148083 instance=ExtResource("4_4synu")]
+position = Vector2(645, 432)
+
+[node name="Pohon" parent="YSortEnvironment/Nature" unique_id=146991205 instance=ExtResource("4_uxg3y")]
 position = Vector2(727, -633)
 
 [node name="Pohon2" parent="YSortEnvironment/Nature" unique_id=1710364349 instance=ExtResource("4_uxg3y")]
@@ -6174,7 +6237,7 @@ position = Vector2(637, -218)
 position = Vector2(690, -334)
 
 [node name="Pohon6" parent="YSortEnvironment/Nature" unique_id=1916594925 instance=ExtResource("4_uxg3y")]
-position = Vector2(634, 169)
+position = Vector2(-767, 730)
 
 [node name="Pohon7" parent="YSortEnvironment/Nature" unique_id=1801703465 instance=ExtResource("4_uxg3y")]
 position = Vector2(629, 39)
@@ -6198,7 +6261,7 @@ position = Vector2(534, 640)
 position = Vector2(457, 730)
 
 [node name="Pohon16" parent="YSortEnvironment/Nature" unique_id=380593447 instance=ExtResource("4_uxg3y")]
-position = Vector2(693, 127)
+position = Vector2(-687, 704)
 
 [node name="Pohon15" parent="YSortEnvironment/Nature" unique_id=441503209 instance=ExtResource("4_uxg3y")]
 position = Vector2(731, 726)
@@ -6217,6 +6280,52 @@ position = Vector2(673, 355)
 
 [node name="Pohon14" parent="YSortEnvironment/Nature" unique_id=1803600736 instance=ExtResource("4_uxg3y")]
 position = Vector2(632, 523)
+
+[node name="Ladang" type="Node2D" parent="YSortEnvironment" unique_id=755072455]
+
+[node name="TanamanWortel" parent="YSortEnvironment/Ladang" unique_id=2124368451 instance=ExtResource("6_cyf2o")]
+position = Vector2(-699, 382)
+
+[node name="TanamanWortel2" parent="YSortEnvironment/Ladang" unique_id=1811306819 instance=ExtResource("6_cyf2o")]
+position = Vector2(-642, 383)
+
+[node name="TanamanWortel3" parent="YSortEnvironment/Ladang" unique_id=1064643207 instance=ExtResource("6_cyf2o")]
+position = Vector2(-586, 325)
+
+[node name="TanamanWortel4" parent="YSortEnvironment/Ladang" unique_id=1059666668 instance=ExtResource("6_cyf2o")]
+position = Vector2(-586, 383)
+
+[node name="TanamanWortel5" parent="YSortEnvironment/Ladang" unique_id=691794971 instance=ExtResource("6_cyf2o")]
+position = Vector2(-700, 325)
+
+[node name="TanamanWortel6" parent="YSortEnvironment/Ladang" unique_id=1346375376 instance=ExtResource("6_cyf2o")]
+position = Vector2(-643, 325)
+
+[node name="TanamanWortel9" parent="YSortEnvironment/Ladang" unique_id=107981378 instance=ExtResource("6_cyf2o")]
+position = Vector2(-586, 439)
+
+[node name="TanamanWortel8" parent="YSortEnvironment/Ladang" unique_id=85347698 instance=ExtResource("6_cyf2o")]
+position = Vector2(-642, 439)
+
+[node name="TanamanWortel7" parent="YSortEnvironment/Ladang" unique_id=631548475 instance=ExtResource("6_cyf2o")]
+position = Vector2(-699, 439)
+
+[node name="Rumah" type="Node2D" parent="YSortEnvironment" unique_id=984330832]
+
+[node name="RumahtipeA" parent="YSortEnvironment/Rumah" unique_id=32798013 instance=ExtResource("7_cyf2o")]
+position = Vector2(-425, -554)
+
+[node name="RumahtipeA5" parent="YSortEnvironment/Rumah" unique_id=139567785 instance=ExtResource("7_cyf2o")]
+position = Vector2(-542, -556)
+
+[node name="RumahtipeA4" parent="YSortEnvironment/Rumah" unique_id=2049094828 instance=ExtResource("7_cyf2o")]
+position = Vector2(-97, -557)
+
+[node name="RumahtipeA3" parent="YSortEnvironment/Rumah" unique_id=307638773 instance=ExtResource("7_cyf2o")]
+position = Vector2(-205, -558)
+
+[node name="RumahtipeA2" parent="YSortEnvironment/Rumah" unique_id=554092621 instance=ExtResource("7_cyf2o")]
+position = Vector2(-316, -557)
 
 [node name="EventMarkers" type="Node2D" parent="." unique_id=2082399033]
 

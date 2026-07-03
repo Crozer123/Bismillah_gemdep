@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ca8tnjqn252e0"]
+
+[ext_resource type="Texture2D" uid="uid://dut22qjprrhjw" path="res://assets/pohon2fix.png" id="1_xg63h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5viw"]
+radius = 3.9
+height = 18.0
+
+[node name="Pohon" type="StaticBody2D" unique_id=589675631]
+position = Vector2(-76, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=13242873]
+position = Vector2(23.5, 6.499997)
+scale = Vector2(0.020263672, 0.020263672)
+texture = ExtResource("1_xg63h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240078342]
+position = Vector2(26, 40)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_p5viw")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bg0qppjsms6co"]
+
+[ext_resource type="Texture2D" uid="uid://cplo2nf280ibe" path="res://assets/tanaman.png" id="1_w1h4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
+size = Vector2(57, 57.25)
+
+[node name="TanamanWortel" type="Area2D" unique_id=2124368451]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743218588]
+position = Vector2(110.5, 60.488213)
+scale = Vector2(0.32547164, 0.32547173)
+texture = ExtResource("1_w1h4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454513328]
+position = Vector2(109.5, 55.375)
+shape = SubResource("RectangleShape2D_uj04i")
