@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://p7xn6wrah683"]
+
+[ext_resource type="Texture2D" uid="uid://cwi1ibcrkfkby" path="res://assets/Pabrik.png" id="1_346x3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyhf8"]
+size = Vector2(100, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
+size = Vector2(29.320507, 74.669235)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc63w"]
+size = Vector2(4.25, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h7mn"]
+size = Vector2(5.25, 41.25)
+
+[node name="pabrik" type="StaticBody2D" unique_id=550068448]
+metadata/_edit_horizontal_guides_ = [-1922.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1495285075]
+position = Vector2(252.31252, -287.3125)
+scale = Vector2(0.03677368, 0.03677368)
+texture = ExtResource("1_346x3")
+
+[node name="collisonbangunanutama" type="CollisionShape2D" parent="." unique_id=1824199203]
+position = Vector2(266, -295)
+shape = SubResource("RectangleShape2D_dyhf8")
+
+[node name="collisonbangunankiri" type="CollisionShape2D" parent="." unique_id=1031052044]
+position = Vector2(201.66025, -320.33463)
+rotation = 3.1415925
+shape = SubResource("RectangleShape2D_p5viw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=77816431]
+position = Vector2(184.125, -328)
+shape = SubResource("RectangleShape2D_jc63w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1715904692]
+position = Vector2(179.625, -329)
+shape = SubResource("RectangleShape2D_7h7mn")

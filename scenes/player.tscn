@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://qrm47mtcdsr2"]
+
+[ext_resource type="Script" uid="uid://bvyj88tcd1vrn" path="res://scenes/player.gd" id="1_3vyb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+size = Vector2(40, 40)
+
+[node name="Player" type="CharacterBody2D" unique_id=186314033]
+script = ExtResource("1_3vyb7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2002544730]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146154938]
+shape = SubResource("RectangleShape2D_3vyb7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=261814898]
