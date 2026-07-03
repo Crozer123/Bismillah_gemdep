@@ -3,16 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://7oun5rafvig3" path="res://assets/Group 54-1.png (2).png" id="1_ww37k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5viw"]
-radius = 3.0
-height = 6.0
+radius = 3.9
+height = 26.0
 
 [node name="Pohon" type="StaticBody2D" unique_id=589675631]
 position = Vector2(-76, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=13242873]
-position = Vector2(0, -6)
-scale = Vector2(0.0043411274, 0.0043411274)
+position = Vector2(23.5, 6.499997)
+scale = Vector2(0.020263672, 0.020263672)
 texture = ExtResource("1_ww37k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240078342]
+position = Vector2(23, 40)
+rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_p5viw")

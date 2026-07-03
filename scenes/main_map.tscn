@@ -6119,7 +6119,7 @@ position = Vector2(1, 0)
 y_sort_enabled = true
 
 [node name="pabrik" parent="YSortEnvironment/Buildings" unique_id=550068448 instance=ExtResource("3_eqscl")]
-position = Vector2(259, 31)
+position = Vector2(156, 53)
 
 [node name="PosKampling" type="StaticBody2D" parent="YSortEnvironment/Buildings" unique_id=1755715966]
 
@@ -6132,12 +6132,94 @@ y_sort_enabled = true
 
 [node name="NPCs" type="Node2D" parent="YSortEnvironment" unique_id=914863063]
 
+[node name="Nature" type="Node2D" parent="YSortEnvironment" unique_id=255412113]
+
+[node name="Pohon" parent="YSortEnvironment/Nature" unique_id=589675631 instance=ExtResource("4_uxg3y")]
+position = Vector2(727, -633)
+
+[node name="Pohon2" parent="YSortEnvironment/Nature" unique_id=1710364349 instance=ExtResource("4_uxg3y")]
+position = Vector2(625, -363)
+
+[node name="Pohon28" parent="YSortEnvironment/Nature" unique_id=370714540 instance=ExtResource("4_uxg3y")]
+position = Vector2(454, -677)
+
+[node name="Pohon27" parent="YSortEnvironment/Nature" unique_id=332588597 instance=ExtResource("4_uxg3y")]
+position = Vector2(720, -160)
+
+[node name="Pohon26" parent="YSortEnvironment/Nature" unique_id=2054699824 instance=ExtResource("4_uxg3y")]
+position = Vector2(580, -771)
+
+[node name="Pohon25" parent="YSortEnvironment/Nature" unique_id=1997837593 instance=ExtResource("4_uxg3y")]
+position = Vector2(227, -671)
+
+[node name="Pohon24" parent="YSortEnvironment/Nature" unique_id=347262329 instance=ExtResource("4_uxg3y")]
+position = Vector2(719, -748)
+
+[node name="Pohon23" parent="YSortEnvironment/Nature" unique_id=172678935 instance=ExtResource("4_uxg3y")]
+position = Vector2(721, -494)
+
+[node name="Pohon22" parent="YSortEnvironment/Nature" unique_id=40123054 instance=ExtResource("4_uxg3y")]
+position = Vector2(283, -434)
+
+[node name="Pohon21" parent="YSortEnvironment/Nature" unique_id=2026639254 instance=ExtResource("4_uxg3y")]
+position = Vector2(642, -461)
+
+[node name="Pohon3" parent="YSortEnvironment/Nature" unique_id=1901455935 instance=ExtResource("4_uxg3y")]
+position = Vector2(668, -86)
+
+[node name="Pohon4" parent="YSortEnvironment/Nature" unique_id=1522333006 instance=ExtResource("4_uxg3y")]
+position = Vector2(637, -218)
+
+[node name="Pohon5" parent="YSortEnvironment/Nature" unique_id=775779150 instance=ExtResource("4_uxg3y")]
+position = Vector2(690, -334)
+
+[node name="Pohon6" parent="YSortEnvironment/Nature" unique_id=1916594925 instance=ExtResource("4_uxg3y")]
+position = Vector2(634, 169)
+
+[node name="Pohon7" parent="YSortEnvironment/Nature" unique_id=1801703465 instance=ExtResource("4_uxg3y")]
+position = Vector2(629, 39)
+
+[node name="Pohon8" parent="YSortEnvironment/Nature" unique_id=1555518782 instance=ExtResource("4_uxg3y")]
+position = Vector2(727, 4)
+
+[node name="Pohon9" parent="YSortEnvironment/Nature" unique_id=333515288 instance=ExtResource("4_uxg3y")]
+position = Vector2(650, 725)
+
+[node name="Pohon20" parent="YSortEnvironment/Nature" unique_id=1603263625 instance=ExtResource("4_uxg3y")]
+position = Vector2(401, 681)
+
+[node name="Pohon19" parent="YSortEnvironment/Nature" unique_id=1403287401 instance=ExtResource("4_uxg3y")]
+position = Vector2(727, 598)
+
+[node name="Pohon18" parent="YSortEnvironment/Nature" unique_id=1827015841 instance=ExtResource("4_uxg3y")]
+position = Vector2(534, 640)
+
+[node name="Pohon17" parent="YSortEnvironment/Nature" unique_id=467001007 instance=ExtResource("4_uxg3y")]
+position = Vector2(457, 730)
+
+[node name="Pohon16" parent="YSortEnvironment/Nature" unique_id=380593447 instance=ExtResource("4_uxg3y")]
+position = Vector2(693, 127)
+
+[node name="Pohon15" parent="YSortEnvironment/Nature" unique_id=441503209 instance=ExtResource("4_uxg3y")]
+position = Vector2(731, 726)
+
+[node name="Pohon10" parent="YSortEnvironment/Nature" unique_id=1516080801 instance=ExtResource("4_uxg3y")]
+position = Vector2(715, 495)
+
+[node name="Pohon11" parent="YSortEnvironment/Nature" unique_id=622710503 instance=ExtResource("4_uxg3y")]
+position = Vector2(634, 268)
+
+[node name="Pohon12" parent="YSortEnvironment/Nature" unique_id=1745423147 instance=ExtResource("4_uxg3y")]
+position = Vector2(731, 203)
+
+[node name="Pohon13" parent="YSortEnvironment/Nature" unique_id=731707829 instance=ExtResource("4_uxg3y")]
+position = Vector2(673, 355)
+
+[node name="Pohon14" parent="YSortEnvironment/Nature" unique_id=1803600736 instance=ExtResource("4_uxg3y")]
+position = Vector2(632, 523)
+
 [node name="EventMarkers" type="Node2D" parent="." unique_id=2082399033]
 
 [node name="Marker_Konser" type="Marker2D" parent="EventMarkers" unique_id=246180901]
 
 [node name="Marker_PasarRakyat" type="Marker2D" parent="EventMarkers" unique_id=1124511525]
-
-[node name="Nature" type="Node2D" parent="." unique_id=255412113]
-
-[node name="Pohon" parent="Nature" unique_id=589675631 instance=ExtResource("4_uxg3y")]
